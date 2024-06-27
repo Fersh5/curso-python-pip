@@ -1,4 +1,5 @@
 import csv
+import os
 
 def read_csv(phat):
     with open(phat,'r') as csvfile:
@@ -8,6 +9,8 @@ def read_csv(phat):
         return dict_list
 
 if __name__=='__main__':
-    data = read_csv('./world_population.csv')
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    csv_path = os.path.join(current_dir, 'world.csv')
+    data = read_csv(csv_path)
     print(data)
 

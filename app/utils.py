@@ -1,6 +1,10 @@
 import read_csv
 import re
-data = read_csv.read_csv('./world_population.csv')
+import os
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+csv_path = os.path.join(current_dir, 'world.csv')
+data = read_csv.read_csv(csv_path)
 
 def get_dict_country(country):
     dict_country = [row for row in data if row['Country/Territory']==country]

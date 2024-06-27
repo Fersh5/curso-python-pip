@@ -11,7 +11,7 @@ def run():
         result = utils.get_dict_country(country)
         if len(result)>0:
             keys, values = utils.get_population(result)
-            charts.generate_bar_chart(keys,values)
+            charts.generate_bar_chart(country,keys,values)
         else:
             print('Ciudad no encontrada')
 
