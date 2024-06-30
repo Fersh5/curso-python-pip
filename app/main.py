@@ -1,8 +1,15 @@
 import utils
 import charts
 import read_csv
+import pandas as pd
 
 def run():
+    '''
+    df = pd.read_csv('world.csv')
+    countries = df[df['Country']].values
+    percentages = df[df['World Population Percentage']].values
+    '''
+    
     country = input('Type Country: ')
     if country == 'Densidad':
         labels,values=utils.get_axes_pie()
