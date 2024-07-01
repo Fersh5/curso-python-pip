@@ -1,0 +1,10 @@
+services:
+  web-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - '8080:80' #8080 puerto en el que se muestra al navegador, 
+                  #Puerto 80 donde ejecuta internamente docker
